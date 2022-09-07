@@ -8,30 +8,30 @@ namespace OrderProcessing.Customer.Data
 
         public CustomerRepository()
         {
-            Person customer1 = new Person()
+            customers.Add(new Person()
             {
                 Id = Guid.NewGuid(),
-                Name = "My BFF Rose",
-                Address = "123 Friend St",
-                PhoneNumber = "206-123-4567"
-            };
-            Person customer2 = new Person()
+                FirstName = "Rosalind",
+                LastName = "Franklin",
+                Address = "Hyderabad, India",
+                Phone = "9999999999",
+                EmailAddress = "dna@yahoo.com"
+            });
+
+            customers.Add(new Person()
             {
                 Id = Guid.NewGuid(),
-                Name = "Rosie the Riveter",
-                Address = "123 Mfr St",
-                PhoneNumber = "908-123-4567"
-            };
-            Person customer3 = new Person()
-            {
-                Id = Guid.NewGuid(),
-                Name = "Rosalind Franklin",
-                Address = "123 DNA St",
-                PhoneNumber = "312-123-4567"
-            };
-            customers.Add(customer1);
-            customers.Add(customer2);
-            customers.Add(customer3);
+                FirstName = "Rose",
+                LastName = "McGowen",
+                Address = "Calgary, Canada",
+                Phone = "1111111111",
+                EmailAddress = "cultbaby@gmail.com"
+            });
+        }
+
+        public Task<List<Person>> GetAllCustomers()
+        {
+            return Task.FromResult(customers);
         }
     }
 }

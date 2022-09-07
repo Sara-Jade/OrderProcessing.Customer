@@ -18,11 +18,10 @@ namespace OrderProcessing.Customer.Controllers
         }
 
         // GET: api/<CustomerController>
-        [HttpGet]
-        public List<Person> Get()
+        [HttpGet("GetAllCustomers")]
+        public async Task<List<Person>> GetAllCustomers()
         {
-            // return new string[] { "value1", "value2" };
-            return _customerRepository.customers;
+            return await _customerRepository.GetAllCustomers();
         }
 
         // GET api/<CustomerController>/5
