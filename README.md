@@ -32,4 +32,11 @@ Use Visual Studio 2022 to build.
 <br>
 
 ## Test
-Use Postman or your web browser for manual testing/demoing. As stated in Getting Started, don't forget to update each BFF controller's port number the first time using it!
+Use Postman or your web browser for manual testing/demoing. As stated in Demoing, don't forget to update [BFF.Mobile](https://github.com/Sara-Jade/BFF.Mobile)'s port number the first time using it!
+
+<br>
+
+## Contribute
+
+1. Currently, the only implemented route is `GET` `/api/Customer/GetAllCustomers`. Other routes could be implemented.
+2. The database currently uses the repository pattern. Contacting a database separate from this project would be useful.
